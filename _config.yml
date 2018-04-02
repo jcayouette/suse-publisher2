@@ -17,50 +17,90 @@ liquid:
 collections_dir: docs
 collections:
 
-# SUSE CaaS Platform
-  _caas-platform:
-    output: true
-
-# SUSE Cloud Application Platform
-  _cloud-app-platform:
-    output: true
-
-# Openstack Cloud
-  _openstack-cloud:
-    output: true
-
-# Enterprise Storage
-  _storage:
-    output: true
-
-# SLES Server
-  _sles:
-    output: true
-
-# SLES Desktop
-  _sles-desktop:
-    output: true
-
-# SLES High Availability Extension
-  _sles-ha:
-    output: true
-
-# SLES Point of Service
-  _sles-pos:
-    output: true
-
-# SLES Point of Service Image Server
-  _sles-pos-is:
-    output: true
-
-# Real Time Extensions
-  _sles-rt:
-    output: true
-
-# SAP Applications
-  _sles-sap:
-    output: true
-
 # SUSE Manager
   _suse-manager:
     output: true
+    permalink: /:name
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "_suse-manager/master/"
+      type: "suse-manager"
+      values:
+        category: "master"
+  -
+    scope:
+      path: "_suse-manager/maint31/"
+      type: "suse-manager"
+      values:
+        category: "maint31"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# TODO Add to collections at a later time.
+# SUSE CaaS Platform
+#  _caas-platform:
+#    output: true
+
+# SUSE Cloud Application Platform
+#  _cloud-app-platform:
+#    output: true
+
+# Openstack Cloud
+#  _openstack-cloud:
+#    output: true
+
+# Enterprise Storage
+#  _storage:
+#    output: true
+
+# SLES Server
+#  _sles:
+#    output: true
+
+# SLES Desktop
+#  _sles-desktop:
+#    output: true
+
+# SLES High Availability Extension
+#  _sles-ha:
+#    output: true
+
+# SLES Point of Service
+#  _sles-pos:
+#    output: true
+
+# SLES Point of Service Image Server
+#  _sles-pos-is:
+#    output: true
+
+# Real Time Extensions
+#  _sles-rt:
+#    output: true
+
+# SAP Applications
+#  _sles-sap:
+#    output: true
