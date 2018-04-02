@@ -1,0 +1,66 @@
+# Site settings
+title: SUSE Live Documentation
+email: jcayouette@suse.com
+description: Live documentation publisher/site for SUSE products. Enterprise and development documentation automated via travisci and updated within minutes. Product docs are stored within their own documentation repositories as .adoc sources (asciidoctor) and are picked up by travisci on an accepted pull request for building and deployment to this publishing repo. Content is then published to a single GitHub gh-pages branch.
+
+url: "https://localhost:4000" # Base hostname & protocol for the Site
+baseurl: "" # the subpath for your site, example /docs
+gh_url: "https://github.com/jcayouette/suse-publisher2"
+
+liquid:
+  error_mode: strict
+
+# SUSE Product collections stored in /docs in versioned folders.
+# "output: true" Each page within a collection will be built as a public facing html document.
+
+# Collections "Products" are stored in the docs/ folder
+collections_dir: docs
+collections:
+
+# SUSE CaaS Platform
+  _caas-platform:
+    output: true
+
+# SUSE Cloud Application Platform
+  _cloud-app-platform:
+    output: true
+
+# Openstack Cloud
+  _openstack-cloud:
+    output: true
+
+# Enterprise Storage
+  _storage:
+    output: true
+
+# SLES Server
+  _sles:
+    output: true
+
+# SLES Desktop
+  _sles-desktop:
+    output: true
+
+# SLES High Availability Extension
+  _sles-ha:
+    output: true
+
+# SLES Point of Service
+  _sles-pos:
+    output: true
+
+# SLES Point of Service Image Server
+  _sles-pos-is:
+    output: true
+
+# Real Time Extensions
+  _sles-rt:
+    output: true
+
+# SAP Applications
+  _sles-sap:
+    output: true
+
+# SUSE Manager
+  _suse-manager:
+    output: true
