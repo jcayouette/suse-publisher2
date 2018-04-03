@@ -1,10 +1,10 @@
 # Site settings
 title: SUSE Live Documentation
 email: jcayouette@suse.com
-description: 'Live documentation publisher/site for SUSE products. 
-Enterprise and development documentation automated via travisci and updated within minutes. 
-Product docs are stored within their own documentation repositories as .adoc sources (asciidoctor) 
-and are picked up by travisci on an accepted pull request for building and deployment to this publishing repo. 
+description: 'Live documentation publisher/site for SUSE products.
+Enterprise and development documentation automated via travisci and updated within minutes.
+Product docs are stored within their own documentation repositories as .adoc sources (asciidoctor)
+and are picked up by travisci on an accepted pull request for building and deployment to this publishing repo.
 Content is then published to a single GitHub gh-pages branch.'
 
 url: "https://localhost:4000" # Base hostname & protocol for the Site
@@ -14,74 +14,69 @@ gh_url: "https://github.com/jcayouette/suse-publisher2"
 liquid:
   error_mode: strict
 
-# SUSE Product collections stored in /docs in versioned folders.
-# "output: true" Each page within a collection will be built as a public facing html document.
-
-# Collections "Products" are stored in the docs/ folder
-collections_dir: docs
 collections:
-
-# SUSE Manager
-  _suse-manager:
+  docs:
+    permalink: ":collection/:path/"
     output: true
-    permalink: /:name
+  posts:
+    permalink: "news/:year/:month/:day/:title/"
+    output: true
 
-# Defaults
 defaults:
   -
     scope:
-      path: "_suse-manager/master/"
-      type: "suse-manager"
+      path: _docs
+      type: docs
       values:
-        category: "master"
+        layout: docs
   -
     scope:
-      path: "_suse-manager/maint31/"
-      type: "suse-manager"
+      path: _posts
+      type: posts
       values:
-        category: "maint31"
+        layout: news
 
 # TODO Add to collections at a later time.
 # SUSE CaaS Platform
-#  _caas-platform:
+#  caas-platform:
 #    output: true
 
 # SUSE Cloud Application Platform
-#  _cloud-app-platform:
+#  cloud-app-platform:
 #    output: true
 
 # Openstack Cloud
-#  _openstack-cloud:
+#  openstack-cloud:
 #    output: true
 
 # Enterprise Storage
-#  _storage:
+#  storage:
 #    output: true
 
 # SLES Server
-#  _sles:
+#  sles:
 #    output: true
 
 # SLES Desktop
-#  _sles-desktop:
+#  sles-desktop:
 #    output: true
 
 # SLES High Availability Extension
-#  _sles-ha:
+#  sles-ha:
 #    output: true
 
 # SLES Point of Service
-#  _sles-pos:
+#  sles-pos:
 #    output: true
 
 # SLES Point of Service Image Server
-#  _sles-pos-is:
+#  sles-pos-is:
 #    output: true
 
 # Real Time Extensions
-#  _sles-rt:
+#  sles-rt:
 #    output: true
 
 # SAP Applications
-#  _sles-sap:
+#  sles-sap:
 #    output: true
