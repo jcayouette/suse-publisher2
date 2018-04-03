@@ -7,9 +7,22 @@ Product docs are stored within their own documentation repositories as .adoc sou
 and are picked up by travisci on an accepted pull request for building and deployment to this publishing repo.
 Content is then published to a single GitHub gh-pages branch.'
 
-url: "https://localhost:4000" # Base hostname & protocol for the Site
+host: 0.0.0.0
+port: 4000
 baseurl: "" # the subpath for your site, example /docs
 gh_url: "https://github.com/jcayouette/suse-publisher2"
+
+exclude:
+  - LICENSE.adoc
+  - README.adoc
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - .idea/
+
+plugins:
+- jekyll-asciidoc
+- jekyll-algolia
 
 liquid:
   error_mode: strict

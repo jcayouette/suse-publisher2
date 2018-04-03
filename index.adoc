@@ -1,0 +1,6 @@
+---
+layout: home
+permalink: home.html
+page-title: home
+---
+This is a test index page.
