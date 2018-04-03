@@ -1,11 +1,11 @@
 # Site settings
 title: SUSE Live Documentation
 email: jcayouette@suse.com
-description: Live documentation publisher/site for SUSE products. 
+description: 'Live documentation publisher/site for SUSE products. 
 Enterprise and development documentation automated via travisci and updated within minutes. 
 Product docs are stored within their own documentation repositories as .adoc sources (asciidoctor) 
 and are picked up by travisci on an accepted pull request for building and deployment to this publishing repo. 
-Content is then published to a single GitHub gh-pages branch.
+Content is then published to a single GitHub gh-pages branch.'
 
 url: "https://localhost:4000" # Base hostname & protocol for the Site
 baseurl: "" # the subpath for your site, example /docs
